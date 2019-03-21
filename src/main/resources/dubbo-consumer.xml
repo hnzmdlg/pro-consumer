@@ -27,6 +27,8 @@
     <dubbo:reference id="webUserService" interface="com.ws.service.WebUserService"/>
     <dubbo:reference id="xinwenService" interface="com.ws.service.XinwenService"/>
     <dubbo:reference id="treeService" interface="com.ws.service.TreeService"/>
+    <dubbo:reference id="salaryService" interface="com.ws.service.SalaryService"/>
+    <dubbo:reference id="seekService" interface="com.ws.service.SeekService"/>
 
 
 

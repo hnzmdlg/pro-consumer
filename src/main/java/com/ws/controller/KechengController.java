@@ -115,6 +115,12 @@ public class KechengController {
 
     }
 
+    @RequestMapping("kechenglist")
+    @ResponseBody
+    public List<Kecheng> kechenglist(){
+        List<Kecheng>list = kechengService.kechenglist();
+        return list;
 
+    }
 
 }
