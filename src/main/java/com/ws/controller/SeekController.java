@@ -55,7 +55,7 @@ public class SeekController {
 
     }
 
-    @RequestMapping("seektlot")
+    @RequestMapping("queryseektList")
     @ResponseBody
     public List<Seek> seektlot(){
         List<Seek>list = seekService.seektlot();
