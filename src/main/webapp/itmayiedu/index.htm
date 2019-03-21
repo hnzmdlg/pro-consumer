@@ -20,6 +20,7 @@
 	<meta content="telephone=no" name="format-detection" />
 
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript"
@@ -428,46 +429,46 @@
 			success:function(data){
 				for(var i=0; i < data.length;i++){
 					$("#weinituijian0").append("<li>\n" +
-							"\t\t\t\t\t\t\t<div class=\"cc-l-wrap\">\n" +
+							"\t\t\t\t\t\t<div class=\"cc-l-wrap\">\n" +
+							"\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
 							"\t\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
-							"\t\t\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
-							"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/107/0\" target=\"_blank\"> <img\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\txsrc="+data[i].kurl+"\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\tsrc="+data[i].kurl+"\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-responsive\" alt=\"\">\n" +
-							"\t\t\t\t\t\t\t\t\t\t</a>\n" +
-							"\t\t\t\t\t\t\t\t\t\t<div class=\"cc-mask\">\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/107/0\"\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t   title=\"\" class=\"comm-btn c-btn-1\" target=\"_blank\">开始学习</a>\n" +
-							"\t\t\t\t\t\t\t\t\t\t</div>\n" +
-							"\t\t\t\t\t\t\t\t\t</section>\n" +
-							"\n" +
-							"\t\t\t\t\t\t\t\t</section>\n" +
-							"\t\t\t\t\t\t\t\t<div class=\"coure-bg-g\">\n" +
-							"\t\t\t\t\t\t\t\t\t<h3 class=\"hLh30 txtOf\">\n" +
-							"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/107/0\"\n" +
-							"\t\t\t\t\t\t\t\t\t\t   title="+data[i].kname+"\n" +
-							"\t\t\t\t\t\t\t\t\t\t   class=\"course-title fsize16 c-333\">"+data[i].kname+"</a>\n" +
-							"\t\t\t\t\t\t\t\t\t</h3>\n" +
-							"\t\t\t\t\t\t\t\t\t<section class=\"mt10 hLh20 of\">\n" +
-							"\t\t\t\t\t\t\t\t\t<span class=\"fr\"> <tt class=\"c-master fsize14 f-fM\">\n" +
-							"\n" +
-							"\n" +
-							"\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"color: #4CAF50\">免费</span>\n" +
-							"\n" +
-							"\n" +
-							"\t\t\t\t\t\t\t\t\t\t</tt></span> <span class=\"fl jgAttr c-ccc f-fA\"> <tt\n" +
-							"\t\t\t\t\t\t\t\t\t\t\tclass=\"c-999 f-fA mr10\">"+data[i].lls+"人学习</tt>\n" +
-							"\t\t\t\t\t\t\t\t\t</span>\n" +
-							"\t\t\t\t\t\t\t\t\t</section>\n" +
-							"\n" +
-							"\t\t\t\t\t\t\t\t\t<div class=\"coures-jbicon\">\n" +
-							"\n" +
+							"\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/87/0\" target=\"_blank\"> <img\n" +
+							"\t\t\t\t\t\t\t\t\t\txsrc=\"http://static.itmayiedu.com/00000000001.jpg\"\n" +
+							"\t\t\t\t\t\t\t\t\t\tsrc=\"http://static.itmayiedu.com/00000000001.jpg\"\n" +
+							"\t\t\t\t\t\t\t\t\t\tclass=\"img-responsive\" alt=\"\">\n" +
+							"\t\t\t\t\t\t\t\t\t</a>\n" +
+							"\t\t\t\t\t\t\t\t\t<div class=\"cc-mask\">\n" +
+							"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/87/0\"\n" +
+							"\t\t\t\t\t\t\t\t\t\t\ttitle=\"\" class=\"comm-btn c-btn-1\" target=\"_blank\">开始学习</a>\n" +
 							"\t\t\t\t\t\t\t\t\t</div>\n" +
+							"\t\t\t\t\t\t\t\t</section>\n" +
+							"\n" +
+							"\t\t\t\t\t\t\t</section>\n" +
+							"\t\t\t\t\t\t\t<div class=\"coure-bg-g\">\n" +
+							"\t\t\t\t\t\t\t\t<h3 class=\"hLh30 txtOf\">\n" +
+							"\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/87/0\"\n" +
+							"\t\t\t\t\t\t\t\t\t\ttitle=\"2019版SpringBoot\"\n" +
+							"\t\t\t\t\t\t\t\t\t\tclass="+data[i].kname+">"+data[i].kname+"</a>\n" +
+							"\t\t\t\t\t\t\t\t</h3>\n" +
+							"\t\t\t\t\t\t\t\t<section class=\"mt10 hLh20 of\">\n" +
+							"\t\t\t\t\t\t\t\t\t<span class=\"fr\"> <tt class=\"c-master fsize14 f-fM\">\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"color: #4CAF50\">免费</span>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t</tt></span> <span class=\"fl jgAttr c-ccc f-fA\"> <tt\n" +
+							"\t\t\t\t\t\t\t\t\t\t\tclass="+data[i].lls+">"+data[i].lls+"人学习</tt>\n" +
+							"\t\t\t\t\t\t\t\t\t</span>\n" +
+							"\t\t\t\t\t\t\t\t</section>\n" +
+							"\n" +
+							"\t\t\t\t\t\t\t\t<div class=\"coures-jbicon\">\n" +
+							"\t\t\t\t\t\t\t\t\t\n" +
 							"\t\t\t\t\t\t\t\t</div>\n" +
 							"\t\t\t\t\t\t\t</div>\n" +
-							"\t\t\t\t\t\t</li>")
+							"\t\t\t\t\t\t</div>\n" +
+							"\t\t\t\t\t</li>")
 				}
 			}
 		})
@@ -488,200 +489,62 @@
 					<article class="comm-course-list">
 						<ul id="goodCourse" class="current">
 
-
-
-							<li>
-								<div class="cc-l-wrap">
-									<section class="course-img">
-										<section class="course-img">
-											<a href="/front/couinfo/190/0" target="_blank"> <img xsrc="http://static.itmayiedu.com/5638e006c812d13fab515000ca13e31.jpg"
-																								 src="http://static.itmayiedu.com/5638e006c812d13fab515000ca13e31.jpg" class="img-responsive" alt="">
-											</a>
-											<div class="cc-mask">
-												<a href="/front/couinfo/190/0" title=""
-												   class="comm-btn c-btn-1" target="_blank">开始学习</a>
-											</div>
-										</section>
-										<span class="new-bargain-jb"> </span>
-									</section>
-									<div class="coure-bg-g">
-										<h3 class="hLh30 txtOf">
-											<a href="/front/couinfo/190/0"
-											   title="ELK+Kafka实现分布式日志收集"
-											   class="course-title fsize16 c-333">ELK+Kafka实现分布式日志收集</a>
-										</h3>
-										<section class="mt10 hLh20 of">
-										<span class="fr"> <tt class="c-master fsize14 f-fM">
-
-
-															会员
-
-
-
-
-
-											</tt></span> <span class="fl jgAttr c-ccc f-fA"> <tt
-												class="c-999 f-fA mr10">11142人学习</tt>
-											<!-- 												<tt class="c-999 f-fA span-2">1301浏览</tt>
- -->
-										</span>
-										</section>
-
-										<div class="coures-jbicon">
-
-											<img src="/static/images/course/c-vip-jb.png">
-
-										</div>
-									</div>
-								</div>
-							</li>
-
-
-
-							<li>
-								<div class="cc-l-wrap">
-									<section class="course-img">
-										<section class="course-img">
-											<a href="/front/couinfo/189/0" target="_blank"> <img xsrc="http://static.itmayiedu.com/0000000000002.jpg"
-																								 src="http://static.itmayiedu.com/0000000000002.jpg" class="img-responsive" alt="">
-											</a>
-											<div class="cc-mask">
-												<a href="/front/couinfo/189/0" title=""
-												   class="comm-btn c-btn-1" target="_blank">开始学习</a>
-											</div>
-										</section>
-										<span class="new-bargain-jb"> </span>
-									</section>
-									<div class="coure-bg-g">
-										<h3 class="hLh30 txtOf">
-											<a href="/front/couinfo/189/0"
-											   title="从0开始构建微服务电商项目"
-											   class="course-title fsize16 c-333">从0开始构建微服务电商项目</a>
-										</h3>
-										<section class="mt10 hLh20 of">
-										<span class="fr"> <tt class="c-master fsize14 f-fM">
-
-
-
-																<span style="color:#4CAF50 ">免费</span>
-
-
-
-
-											</tt></span> <span class="fl jgAttr c-ccc f-fA"> <tt
-												class="c-999 f-fA mr10">47403人学习</tt>
-											<!-- 												<tt class="c-999 f-fA span-2">1301浏览</tt>
- -->
-										</span>
-										</section>
-
-										<div class="coures-jbicon">
-
-										</div>
-									</div>
-								</div>
-							</li>
-
-
-
-							<li>
-								<div class="cc-l-wrap">
-									<section class="course-img">
-										<section class="course-img">
-											<a href="/front/couinfo/185/0" target="_blank"> <img xsrc="http://static.itmayiedu.com/00000000000030.jpg"
-																								 src="http://static.itmayiedu.com/00000000000030.jpg" class="img-responsive" alt="">
-											</a>
-											<div class="cc-mask">
-												<a href="/front/couinfo/185/0" title=""
-												   class="comm-btn c-btn-1" target="_blank">开始学习</a>
-											</div>
-										</section>
-										<span class="new-bargain-jb"> </span>
-									</section>
-									<div class="coure-bg-g">
-										<h3 class="hLh30 txtOf">
-											<a href="/front/couinfo/185/0"
-											   title="大型电商系统商品数据库设计"
-											   class="course-title fsize16 c-333">大型电商系统商品数据库设计</a>
-										</h3>
-										<section class="mt10 hLh20 of">
-										<span class="fr"> <tt class="c-master fsize14 f-fM">
-
-
-															会员
-
-
-
-
-
-											</tt></span> <span class="fl jgAttr c-ccc f-fA"> <tt
-												class="c-999 f-fA mr10">12569人学习</tt>
-											<!-- 												<tt class="c-999 f-fA span-2">1301浏览</tt>
- -->
-										</span>
-										</section>
-
-										<div class="coures-jbicon">
-
-											<img src="/static/images/course/c-vip-jb.png">
-
-										</div>
-									</div>
-								</div>
-							</li>
-
-
-
-							<li>
-								<div class="cc-l-wrap">
-									<section class="course-img">
-										<section class="course-img">
-											<a href="/front/couinfo/184/0" target="_blank"> <img xsrc="http://static.itmayiedu.com/000000000sos.jpg"
-																								 src="http://static.itmayiedu.com/000000000sos.jpg" class="img-responsive" alt="">
-											</a>
-											<div class="cc-mask">
-												<a href="/front/couinfo/184/0" title=""
-												   class="comm-btn c-btn-1" target="_blank">开始学习</a>
-											</div>
-										</section>
-										<span class="new-bargain-jb"> </span>
-									</section>
-									<div class="coure-bg-g">
-										<h3 class="hLh30 txtOf">
-											<a href="/front/couinfo/184/0"
-											   title="SSO单点登陆系统设计"
-											   class="course-title fsize16 c-333">SSO单点登陆系统设计</a>
-										</h3>
-										<section class="mt10 hLh20 of">
-										<span class="fr"> <tt class="c-master fsize14 f-fM">
-
-
-															会员
-
-
-
-
-
-											</tt></span> <span class="fl jgAttr c-ccc f-fA"> <tt
-												class="c-999 f-fA mr10">15753人学习</tt>
-											<!-- 												<tt class="c-999 f-fA span-2">1301浏览</tt>
- -->
-										</span>
-										</section>
-
-										<div class="coures-jbicon">
-
-											<img src="/static/images/course/c-vip-jb.png">
-
-										</div>
-									</div>
-								</div>
-							</li>
-
-
-
-
-
+	<script>
+						$(function(){
+							$.ajax({
+								url: "/querykechenglist",
+								success:function (data) {
+									for (var i = 0; i < data.length; i++) {
+										$("#goodCourse").append("<li>\n" +
+												"\t\t\t\t\t\t\t<div class=\"cc-l-wrap\">\n" +
+												"\t\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
+												"\t\t\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/191/0\" target=\"_blank\"> <img xsrc=\"http://static.itmayiedu.com/0000000000053.jpg\"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\tsrc=\"http://static.itmayiedu.com/0000000000053.jpg\" class=\"img-responsive\" alt=\"\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t</a>\n" +
+												"\t\t\t\t\t\t\t\t\t\t<div class=\"cc-mask\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/191/0\" title=\"\"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\tclass=\"comm-btn c-btn-1\" target=\"_blank\">开始学习</a>\n" +
+												"\t\t\t\t\t\t\t\t\t\t</div>\n" +
+												"\t\t\t\t\t\t\t\t\t</section>\n" +
+												"\t\t\t\t\t\t\t\t\t<span class=\"new-bargain-jb\"> </span>\n" +
+												"\t\t\t\t\t\t\t\t</section>\n" +
+												"\t\t\t\t\t\t\t\t<div class=\"coure-bg-g\">\n" +
+												"\t\t\t\t\t\t\t\t\t<h3 class=\"hLh30 txtOf\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/191/0\"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\ttitle="+data[i].kname+"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\tclass=\"course-title fsize16 c-333\">"+data[i].kname+"</a>\n" +
+												"\t\t\t\t\t\t\t\t\t</h3>\n" +
+												"\t\t\t\t\t\t\t\t\t<section class=\"mt10 hLh20 of\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t<span class=\"fr\"> <tt class=\"c-master fsize14 f-fM\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t会员\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t</tt></span> <span class=\"fl jgAttr c-ccc f-fA\"> <tt\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\tclass="+data[i].lls+">"+data[i].lls+"人学习</tt>\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t<!-- \t\t\t\t\t\t\t\t\t\t\t\t<tt class=\"c-999 f-fA span-2\"></tt>\n" +
+												" -->\n" +
+												"\t\t\t\t\t\t\t\t\t\t</span>\n" +
+												"\t\t\t\t\t\t\t\t\t</section>\n" +
+												"\n" +
+												"\t\t\t\t\t\t\t\t\t<div class=\"coures-jbicon\">\n" +
+												"\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t\t\n" +
+												"\t\t\t\t\t\t\t\t\t</div>\n" +
+												"\t\t\t\t\t\t\t\t</div>\n" +
+												"\t\t\t\t\t\t\t</div>\n" +
+												"\t\t\t\t\t\t</li>\n")
+									}
+								}
+							})
+						})
+	</script>
 
 
 						</ul>
@@ -708,7 +571,7 @@
 		</div>
 
 
-		<!-- 微服务课程 -->
+		<!--&lt;!&ndash; 微服务课程 &ndash;&gt;
 
 
 
@@ -756,7 +619,7 @@
 
 										<div class="coures-jbicon">
 
-											<!-- <img src="/static/images/course/c-vip-jb.png"> -->
+											&lt;!&ndash; <img src="/static/images/course/c-vip-jb.png"> &ndash;&gt;
 
 										</div>
 									</div>
@@ -799,7 +662,7 @@
 
 										<div class="coures-jbicon">
 
-											<!-- <img src="/static/images/course/c-vip-jb.png"> -->
+											&lt;!&ndash; <img src="/static/images/course/c-vip-jb.png"> &ndash;&gt;
 
 										</div>
 									</div>
@@ -844,7 +707,7 @@
 
 										<div class="coures-jbicon">
 
-											<!-- <img src="/static/images/course/c-vip-jb.png"> -->
+											&lt;!&ndash; <img src="/static/images/course/c-vip-jb.png"> &ndash;&gt;
 
 										</div>
 									</div>
@@ -888,7 +751,7 @@
 
 										<div class="coures-jbicon">
 
-											<!-- <img src="/static/images/course/c-vip-jb.png"> -->
+											&lt;!&ndash; <img src="/static/images/course/c-vip-jb.png"> &ndash;&gt;
 
 										</div>
 									</div>
@@ -901,7 +764,7 @@
 					</article>
 				</div>
 			</section>
-		</div>
+		</div>-->
 
 		<!--&lt;!&ndash; /网校课程 开始 &ndash;&gt;
 		<div>
@@ -968,52 +831,53 @@
 								<ul>
 
 									<style>
-										table,tbody,tfoot,thead,tr,th,td {
-											margin:0;
-											padding:0;
-											outline:0;
-											font-size:100%;
-											vertical-align:baseline;
-											background:transparent;
-											border-collapse:collapse;
-											border-spacing:0;
-											border:0px;
-										}
-										.tablebox {
-											width:550px;
-											height:280px;
-											overflow:hidden;
-											margin:5px auto;
-										}
-										.tablebox table {
-											width:100%;
-										}
-										.tablebox table th,.tablebox table td {
-											font-size:14px;
-											text-align:center;
-											line-height:36px;
-											font-family: "微软雅黑";
-											color: #495055;
-										}
-										.tablebox table th {
-											color: #FAFAFA;
-											background-color: #FF7043;
-										}
-										.tablebox table td img {
-											display:inline-block;
-											vertical-align:middle;
-										}
-										.tablebox table tbody tr:nth-child(even) {
-											background-color:#F5F5F5;
-										}
-										.tablebox.table_md table td,.tablebox.table_md table th {
-											line-height:40px;
-										}
-									</style>
+									table,tbody,tfoot,thead,tr,th,td {
+										margin:0;
+										padding:0;
+										outline:0;
+										font-size:100%;
+										vertical-align:baseline;
+										background:transparent;
+										border-collapse:collapse;
+										border-spacing:0;
+										border:0px;
+									}
+									.tablebox {
+										width:550px;
+										height:280px;
+										overflow:hidden;
+										margin:5px auto;
+									}
+									.tablebox table {
+										width:100%;
+									}
+									.tablebox table th,.tablebox table td {
+										font-size:14px;
+										text-align:center;
+										line-height:36px;
+										font-family: "微软雅黑";
+										color: #495055;
+									}
+									.tablebox table th {
+										color: #FAFAFA;
+										background-color: #FF7043;
+									}
+									.tablebox table td img {
+										display:inline-block;
+										vertical-align:middle;
+									}
+									.tablebox table tbody tr:nth-child(even) {
+										background-color:#F5F5F5;
+									}
+									.tablebox.table_md table td,.tablebox.table_md table th {
+										line-height:40px;
+									}
+								</style>
 									</head>
-									<body><!--id="scrollBox"-->
-									<div class="tablebox" style="border: 1px solid #dddddd" >
-										<table id="tableid" border="0" cellspacing="0" cellpadding="0">
+									<body>
+									<!--id="scrollBox"-->
+									<div  class="tablebox" style="border: 1px solid #dddddd" >
+										<table id="id" border="0" cellspacing="0" cellpadding="0" >
 											<thead>
 											<tr>
 												<th>学员姓名</th>
@@ -1026,13 +890,47 @@
 											</tr>
 											</thead>
 
-                                                <tbody>
+
+										</table>
+										<div  class="tablebox" style="border: 1px solid #dddddd" id="scrollBox">
+
+											<table id="iid" border="0" cellspacing="0" cellpadding="0" >
+												<thead>
+
+												</thead>
+
+												<tbody id="textid">
+
+												</tbody>
+
+											</table>
+
+										</div>
+
+
+
+									</div>
+									<!--<div class="tablebox" style="border: 1px solid #dddddd" >
+										<table id="id" border="0" cellspacing="0" cellpadding="1" >
+											<thead>
+											<tr>
+												<th>学员姓名</th>
+												<th>所在城市</th>
+												<th>学员学历</th>
+												<th>培训前薪资</th>
+												<th>培训后薪资</th>
+
+
+											</tr>
+											</thead>
+
+                                                <tbody >
                                                 <tr></tr>
                                                 </tbody>
 
 											</table>
 
-									</div>
+									</div>-->
 									<script type="text/javascript">
 
 
@@ -1057,7 +955,7 @@
 														content += "<td>" + data[i].ensalary + "</td>";
                                                         "</tr>";
 													}
-													$("tbody").html(content);
+													$("#textid").html(content);
 													console.info(data)
 												},
 
@@ -1079,7 +977,7 @@
                                         function scrollUp(){
                                             if(area.scrollTop % lHeight==0){//滚动一行后，延时2秒
                                                 clearInterval(timer);
-                                                setTimeout("scrollMove()",1000);
+                                                setTimeout("scrollMove()");
                                             }else{
                                                 area.scrollTop++;
                                                 if(area.scrollTop>=area.scrollHeight/2){    //判断滚动高度,当滚动高度大于area本身的高度时，使其回到原点重新滚动
@@ -1089,57 +987,57 @@
 
                                         }
 
-                                        setTimeout("scrollMove()",1000);//延迟2秒后执行scrollMove
+                                        setTimeout("scrollMove()");//延迟2秒后执行scrollMove
+										//  setTimeout("scrollMove()",1000);//延迟2秒后执行scrollMove
 
 
 
 
-									</script>
-									<script>
+
 										// 参数1 tableID,参数2 div高度，参数3 速度，参数4 tbody中tr几条以上滚动
-										tableScroll('tableid', 295, 25, 1)
+										tableScroll('id', 295, 25, 1)
 										var MyMarhq;
 
-										function tableScroll(tableid, hei, speed, len) {
+										function tableScroll(id, hei, speed, len) {
 											clearTimeout(MyMarhq);
-											$('#' + tableid).parent().find('.tableid_').remove()
-											$('#' + tableid).parent().prepend(
-													'<table class="tableid_"><thead>' + $('#' + tableid + ' thead').html() + '</thead></table>'
+											$('#' + id).parent().find('.id').remove()
+											$('#' + id).parent().prepend(
+													'<table class="id"><thead>' + $('#' + id + ' thead').html() + '</thead></table>'
 											).css({
 												'position': 'relative',
 												'overflow': 'hidden',
 												'height': hei + 'px'
 											})
-											$(".tableid_").find('th').each(function(i) {
-												$(this).css('width', $('#' + tableid).find('th:eq(' + i + ')').width());
+											$(".id").find('th').each(function(i) {
+												$(this).css('width', $('#' + id).find('th:eq(' + i + ')').width());
 											});
-											$(".tableid_").css({
+											$(".id").css({
 												'position': 'absolute',
 												'top': 0,
 												'left': 0,
 												'z-index': 9
 											})
-											$('#' + tableid).css({
+											$('#' + id).css({
 												'position': 'absolute',
 												'top': 0,
 												'left': 0,
 												'z-index': 1
 											})
 
-											if ($('#' + tableid).find('tbody tr').length > len) {
-												$('#' + tableid).find('tbody').html($('#' + tableid).find('tbody').html() + $('#' + tableid).find('tbody').html());
-												$(".tableid_").css('top', 0);
-												$('#' + tableid).css('top', 0);
+											if ($('#' + id).find('tbody tr').length > len) {
+												$('#' + id).find('tbody').html($('#' + id).find('tbody').html() + $('#' + id).find('tbody').html());
+												$(".id").css('top', 0);
+												$('#' + id).css('top', 0);
 												var tblTop = 0;
-												var outerHeight = $('#' + tableid).find('tbody').find("tr").outerHeight();
+												var outerHeight = $('#' + id).find('tbody').find("tr").outerHeight();
 
 												function Marqueehq() {
-													if (tblTop <= -outerHeight * $('#' + tableid).find('tbody').find("tr").length) {
+													if (tblTop <= -outerHeight * $('#' + id).find('tbody').find("tr").length) {
 														tblTop = 0;
 													} else {
 														tblTop -= 1;
 													}
-													$('#' + tableid).css('margin-top', tblTop + 'px');
+													$('#' + id).css('margin-top', tblTop + 'px');
 													clearTimeout(MyMarhq);
 													MyMarhq = setTimeout(function() {
 														Marqueehq()
@@ -1147,11 +1045,11 @@
 												}
 
 												MyMarhq = setTimeout(Marqueehq, speed);
-												$('#' + tableid).find('tbody').hover(function() {
+												$('#' + id).find('tbody').hover(function() {
 													clearTimeout(MyMarhq);
 												}, function() {
 													clearTimeout(MyMarhq);
-													if ($('#' + tableid).find('tbody tr').length > len) {
+													if ($('#' + id).find('tbody tr').length > len) {
 														MyMarhq = setTimeout(Marqueehq, speed);
 													}
 												})
@@ -1159,8 +1057,9 @@
 
 										}
 									</script>
-									</body>
 
+</body>
+</html>
 
 
 </ul>
@@ -1170,7 +1069,6 @@
 </div>
 </section>
 </div>
-
 
 
 <div style="width: 550px; float: right; margin-top: -410px;
@@ -1188,47 +1086,56 @@ white-space: nowrap;
 	<section class="in-new-box clerfix">
 		<div class="clearfix">
 
+			<div class="tablebox" style="border: 1px solid #dddddd">
+				<table id="uuid" border="0" cellspacing="0" cellpadding="0">
+					<thead>
 
+					</thead>
+
+					<tbody id="seekid">
+					<tr></tr>
+					</tbody>
+
+				</table>
+
+			</div>
+			<script type="text/javascript">
+
+				$(function(){
+
+					$.ajax({
+						url: '/queryseektList',
+						type: 'post',
+						dataType: 'json',
+						success: function (data) {
+							var cont = "";
+							for (var i in data) {
+								cont += "<tr>";
+
+								cont += "<td>" + data[i].id + "</td>";
+								cont += "<td>" + data[i].name + "</td>";
+								"</tr>";
+							}
+							$("#seekid").html(cont);
+							console.info(data)
+						}
+					})
+					})
+
+
+
+
+
+			</script>
 			<article class="w50pre fl" >
 				<div class="ml30 i-article-list in-new-box-list" style="display:inline-block;" >
 					<section class="i-article-list r-art-wrap">
+						<ul>
 
 
 
 
 
-
-						<ul  >
-							<li class="lt2" >
-								<aside class="orderNum"><span>1</span></aside>
-								<h3 class="hLh30 txtOf">
-									<a href="https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd" target="_blank"  title="蚂蚁课堂会员充值须知.上海每特教育科技有限公司.." class="i-art-title" >一张图看完每特教育培训后薪资涨幅高达1万元</a>
-								</h3>
-							</li>
-							<li class="lt2">
-								<aside class="orderNum"><span>2</span></aside>
-								<h3 class="hLh30 txtOf">
-									<a href="https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc" target="_blank" title="蚂蚁课堂会员充值须知.上海每特教育科技有限公司.." class="i-art-title">腾讯课堂入驻最年轻的97后Java架构师,年收入几百万元  </a>
-								</h3>
-							</li>
-							<li class="lt2">
-								<aside class="orderNum"><span>3</span></aside>
-								<h3 class="hLh30 txtOf">
-									<a href="http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1" target="_blank" title="蚂蚁课堂会员充值须知.上海每特教育科技有限公司.." class="i-art-title">创办在线教育网站，估值上亿元，拒绝多家风投千万元融资</a>
-								</h3>
-							</li>
-							<li>
-								<aside class="orderNum"><span>4</span></aside>
-								<h3 class="hLh30 txtOf">
-									<a href="front/couinfo/91/0" target="_blank" title="蚂蚁课堂会员充值须知.上海每特教育科技有限公司.." class="i-art-title">每特教育官方SpringCloud微服务视频教程破百万人学习</a>
-								</h3>
-							</li>
-							<li>
-								<aside class="orderNum"><span>5</span></aside>
-								<h3 class="hLh30 txtOf">
-									<a href="https://ke.qq.com/course/291872" target="_blank" title="蚂蚁课堂会员充值须知.上海每特教育科技有限公司.." class="i-art-title">97后互联网架构师腾讯课堂直播互联网架构课程，破千人购买</a>
-								</h3>
-							</li>
 
 
 

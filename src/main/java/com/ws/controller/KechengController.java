@@ -122,5 +122,13 @@ public class KechengController {
         return list;
 
     }
+    //最新课程
+    @RequestMapping("querykechenglist")
+    @ResponseBody
+    public List<Kecheng> querykechenglist(){
+        List<Kecheng>list = kechengService.querykechenglist();
+        return list;
+
+    }
 
 }
