@@ -1,5 +1,6 @@
 package com.ws.service;
 
+import com.ws.bean.Catalog;
 import com.ws.bean.Kecheng;
 
 import java.util.HashMap;
@@ -22,7 +23,7 @@ public interface KechengService {
 
     void updatekechenId(Integer id);
 
-    List<Kecheng> kechenglist();
+    List<Catalog> kechenglist();
 
-    List<Kecheng> querykechenglist();
+    List<Catalog> querykechenglist();
 }

@@ -1,5 +1,6 @@
 package com.ws.controller;
 
+import com.ws.bean.Catalog;
 import com.ws.bean.Kecheng;
 import com.ws.service.KechengService;
 import com.ws.utils.FileUtil;
@@ -117,16 +118,16 @@ public class KechengController {
 
     @RequestMapping("kechenglist")
     @ResponseBody
-    public List<Kecheng> kechenglist(){
-        List<Kecheng>list = kechengService.kechenglist();
+    public List<Catalog> kechenglist(){
+        List<Catalog>list = kechengService.kechenglist();
         return list;
 
     }
     //最新课程
     @RequestMapping("querykechenglist")
     @ResponseBody
-    public List<Kecheng> querykechenglist(){
-        List<Kecheng>list = kechengService.querykechenglist();
+    public List<Catalog> querykechenglist(){
+        List<Catalog>list = kechengService.querykechenglist();
         return list;
 
     }
