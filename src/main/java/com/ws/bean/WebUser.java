@@ -19,7 +19,20 @@ public class WebUser implements Serializable {
     private   String  phone;
 
 
-
+    @Override
+    public String toString() {
+        return "WebUser{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", email='" + email + '\'' +
+                ", sex=" + sex +
+                ", member=" + member +
+                ", expiredate='" + expiredate + '\'' +
+                ", ttid=" + ttid +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 
     public Integer getId() {
         return id;
