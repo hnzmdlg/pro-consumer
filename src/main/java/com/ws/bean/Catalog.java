@@ -1,4 +1,5 @@
 package com.ws.bean;
+//
 
 import java.io.Serializable;
 
@@ -9,8 +10,20 @@ public class Catalog implements Serializable {
     private String mlname;
     private Integer kid;
     private Integer type;
-    private Integer lls;
+
     private  String oktime;
+
+    public String getOktime() {
+        return oktime;
+    }
+
+    public void setOktime(String oktime) {
+        this.oktime = oktime;
+    }
+
+    private String kname;
+    private Integer lls;
+
 
     public Integer getType() {
         return type;
@@ -28,13 +41,6 @@ public class Catalog implements Serializable {
         this.lls = lls;
     }
 
-    public String getOktime() {
-        return oktime;
-    }
-
-    public void setOktime(String oktime) {
-        this.oktime = oktime;
-    }
 
     public Integer getId() {
         return id;
@@ -58,5 +64,29 @@ public class Catalog implements Serializable {
 
     public void setKid(Integer kid) {
         this.kid = kid;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getKname() {
+        return kname;
+    }
+
+    public void setKname(String kname) {
+        this.kname = kname;
+    }
+
+    @Override
+    public String toString() {
+        return "Catalog{" +
+                "id=" + id +
+                ", mlname='" + mlname + '\'' +
+                ", kid=" + kid +
+                ", type=" + type +
+                ", kname='" + kname + '\'' +
+                ", lls=" + lls +
+                '}';
     }
 }

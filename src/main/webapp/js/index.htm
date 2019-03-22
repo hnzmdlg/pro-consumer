@@ -1,0 +1,949 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"utf-8">
+<title>蚂蚁宝典网 - 专注于程序员的面试题分享</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="蚂蚁宝典,蚂蚁课堂,java面试题,前端面试题,java架构师面试题,java高级面试题,python面试题,c++面试题
+">
+<meta name="description"
+	content="蚂蚁面试宝典网：专注于互联网技术面试解析，面试问题及答案免费分享，从Java面试题到其他技术面试题分享等，让更多的人知道问题答案，距offer更进一步！官方QQ交流群：193086273">
+
+
+  <link rel="stylesheet" href="layui.css" tppabs="http://ms.mayikt.com/static/layui/css/layui.css"></link>
+    <link rel="stylesheet" href="global.css" tppabs="http://ms.mayikt.com/res/layui/css/global.css"></link>
+</head>
+<body>
+
+	<div class="fly-header layui-bg-black">
+		<div class="layui-container">
+			<a class="fly-logo" href="index.htm" tppabs="http://ms.mayikt.com/"> <img
+				src="20190227141724.png" tppabs="http://static.itmayiedu.com/20190227141724.png"
+				alt="蚂蚁宝典" style="margin-top: -10px;">
+			</a>
+			<ul class="layui-nav fly-nav layui-hide-xs">
+				<li class="layui-nav-item layui-this"><a href="index.htm" tppabs="http://ms.mayikt.com/"><i
+						class="iconfont icon-jiaoliu"></i>交流</a></li>
+				<li class="layui-nav-item"><a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank" ><i
+						class="iconfont icon-iconmingxinganli"></i>蚂蚁课堂</a></li>
+				<li class="layui-nav-item"><a href="javascript:if(confirm('http://ke.qq.com/course/273548?term_id=100323286&from=41&enter_room=1  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ke.qq.com/course/273548?term_id=100323286&from=41&enter_room=1'" tppabs="http://ke.qq.com/course/273548?term_id=100323286&from=41&enter_room=1"
+					target="_blank"><i class="iconfont icon-ui"></i>腾讯课堂</a></li>
+			</ul>
+
+			<ul class="layui-nav fly-nav-user">
+
+				未登入的状态
+				<li class="layui-nav-item"><a
+					class="iconfont icon-touxiang layui-hide-xs" href="login.htm" tppabs="http://ms.mayikt.com/user/login"></a>
+				</li>
+				<li class="layui-nav-item"><a href="login.htm" tppabs="http://ms.mayikt.com/user/login">登入</a></li>
+			    <li class="layui-nav-item"><a href="javascript:if(confirm('http://ms.mayikt.com/user/reg  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/reg'" tppabs="http://ms.mayikt.com/user/reg">注册</a></li>
+				<li class="layui-nav-item layui-hide-xs"><a href="javascript:if(confirm('http://ms.mayikt.com/app/qq/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/app/qq/'" tppabs="http://ms.mayikt.com/app/qq/"
+					onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+					title="QQ登入" class="iconfont icon-qq"></a></li>
+			
+
+			<!-- 
+				
+      <li class="layui-nav-item">
+        <a class="fly-nav-avatar" href="javascript:;">
+          <cite class="layui-hide-xs">贤心</cite>
+          <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
+          <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
+          <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+          <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+          <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+          <hr style="margin: 5px 0;">
+          <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+        </dl>
+      </li>
+     
+			</ul> -->
+		</div>
+	</div>
+
+	<div class="fly-panel fly-column">
+		<div class="layui-container">
+			<ul class="layui-clear">
+				<li class="layui-hide-xs layui-this"><a href="index.htm" tppabs="http://ms.mayikt.com/">首页</a></li> 
+<li><a href="1.htm" tppabs="http://ms.mayikt.com/findBlogForType/1">面试</a></li> 
+				
+<li><a href="2.htm" tppabs="http://ms.mayikt.com/findBlogForType/2">分享</a></li> 
+				
+<li><a href="3.htm" tppabs="http://ms.mayikt.com/findBlogForType/3">讨论</a></li> 
+				
+<li><a href="4.htm" tppabs="http://ms.mayikt.com/findBlogForType/4">公告</a></li> 
+				
+<li><a href="5.htm" tppabs="http://ms.mayikt.com/findBlogForType/5">动态</a></li> 
+				
+<li><a href="6.htm" tppabs="http://ms.mayikt.com/findBlogForType/6">就业</a></li> 
+				
+				<!--  <li><a href="jieIndex">提问</a></li> 
+      <li><a href="jieIndex">分享<span class="layui-badge-dot"></span></a></li> 
+      <li><a href="jieIndex">讨论</a></li> 
+      <li><a href="jieIndex">建议</a></li> 
+      <li><a href="jieIndex">公告</a></li> 
+      <li><a href="jieIndex">动态</a></li>  -->
+				<li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span
+					class="fly-mid"></span></li>
+
+				<!-- 用户登入后显示 -->
+				<li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a
+					href="#">我发表的贴</a></li>
+				<li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a
+					href="#">我收藏的贴</a></li>
+			</ul>
+
+			<div class="fly-column-right layui-hide-xs">
+				<span class="fly-search"><i class="layui-icon"></i></span> 
+				
+		
+			</div>
+			 <div class="layui-hide-sm layui-show-xs-block"
+				style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
+				<a href="javascript:if(confirm('http://detail/jieAdd  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://detail/jieAdd'" tppabs="http://detail/jieAdd" class="layui-btn">发表新帖</a>
+			</div> 
+		</div>
+	</div>
+
+
+
+
+
+
+<div class="layui-container">
+	<div class="layui-row layui-col-space15">
+		<div class="layui-col-md8">
+			<div class="fly-panel">
+				<div class="fly-panel-title fly-filter">
+					<a>置顶</a> <a href="#signin"
+						class="layui-hide-sm layui-show-xs-block fly-right"
+						id="LAY_goSignin" style="color: #FF5722;">去签到</a>
+				</div>
+				<ul class="fly-list">
+
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="1-1.htm" tppabs="http://ms.mayikt.com/detail/1">每特教育互联网架构培训课程作业题</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-02-21</span> <cite>浏览量</cite>
+							<span>1,287</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="210.htm" tppabs="http://ms.mayikt.com/detail/210">高并发情况下，如果生成分布式全局Id</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-02-25</span> <cite>浏览量</cite>
+							<span>914</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="211.htm" tppabs="http://ms.mayikt.com/detail/211">数据库集群，主键有冲突问题如何解决</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-02-25</span> <cite>浏览量</cite>
+							<span>613</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="213.htm" tppabs="http://ms.mayikt.com/detail/213">你们项目中，有用过Spring吗？SpringBoot是什么框架？</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-02-25</span> <cite>浏览量</cite>
+							<span>816</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="269.htm" tppabs="http://ms.mayikt.com/detail/269">索引底层使用那些数据结构</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>336</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="273.htm" tppabs="http://ms.mayikt.com/detail/273">数据结构 B 树与 B+ 树的区别</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>242</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="274.htm" tppabs="http://ms.mayikt.com/detail/274">Myisam 与 Innodb 引擎中 B+ 树的区别</a>
+						</h2>
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i>
+
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>220</span>
+
+
+						</div>
+						<div class="fly-list-badge">
+							<!--
+              <span class="layui-badge layui-bg-black">置顶</span>
+              <span class="layui-badge layui-bg-red">精帖</span>
+              -->
+						</div></li> 
+
+				</ul>
+			</div>
+
+			<div class="fly-panel" style="margin-bottom: 0;">
+
+				<div class="fly-panel-title fly-filter">
+					<a href="" class="layui-this">综合</a> <span class="fly-mid"></span>
+					<a href="2-1.htm" tppabs="http://ms.mayikt.com/findBlogForKill/2">springcloud</a> <span
+						class="fly-mid"></span> <a href="3-1.htm" tppabs="http://ms.mayikt.com/findBlogForKill/3">springboot</a>
+					<span class="fly-mid"></span> <a href="1-2.htm" tppabs="http://ms.mayikt.com/findBlogForKill/1">高并发</a>
+					<span class="fly-mid"></span> <a href="4-1.htm" tppabs="http://ms.mayikt.com/findBlogForKill/4">数据库</a>
+					<span class="fly-mid"></span> <a href="7.htm" tppabs="http://ms.mayikt.com/findBlogForKill/7">Nginx</a>
+					<span class="fly-mid"></span> <span
+						class="fly-filter-right layui-hide-xs"> <span
+						class="fly-mid"></span> <a href="skill.htm" tppabs="http://ms.mayikt.com/all/skill">更多</a>
+					</span>
+				</div>
+
+				<ul class="fly-list">
+
+
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="299.htm" tppabs="http://ms.mayikt.com/detail/299">Https协议底层实现原理</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>142</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="298.htm" tppabs="http://ms.mayikt.com/detail/298">Http协议与Https协议区别</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>127</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="297.htm" tppabs="http://ms.mayikt.com/detail/297">kafka副本（replication）策略</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>57</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="296.htm" tppabs="http://ms.mayikt.com/detail/296">kafka集群分区原理实现</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>57</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="295.htm" tppabs="http://ms.mayikt.com/detail/295">高可用集群kafka环境搭建</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>48</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="294.htm" tppabs="http://ms.mayikt.com/detail/294">kafka应用场景与简介</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>51</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="293.htm" tppabs="http://ms.mayikt.com/detail/293">RabbitMQ AMQP协议原理</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>75</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="292.htm" tppabs="http://ms.mayikt.com/detail/292">RabbitMQ四中交换机类型</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>65</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="291.htm" tppabs="http://ms.mayikt.com/detail/291">谈谈RabbitMQ五种列队形式</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>68</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="290.htm" tppabs="http://ms.mayikt.com/detail/290">RabbitMQvirtualHost的作用</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>36</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="289.htm" tppabs="http://ms.mayikt.com/detail/289">RabbitMQ、Kafka、ActiveMQ之间区别</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-11</span> <cite>浏览量</cite>
+							<span>72</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="288.htm" tppabs="http://ms.mayikt.com/detail/288">RabbitMQ解决分布式事务原理</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>110</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="287.htm" tppabs="http://ms.mayikt.com/detail/287">LCN解决分布式事务原理</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>98</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="286.htm" tppabs="http://ms.mayikt.com/detail/286">你们项目中如何解决分布式事务</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>111</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="285.htm" tppabs="http://ms.mayikt.com/detail/285">分布式事务有那些解决方案</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>95</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="284.htm" tppabs="http://ms.mayikt.com/detail/284">什么是2PC两阶段提交协议</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>69</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="283.htm" tppabs="http://ms.mayikt.com/detail/283">柔性事务与刚性事务区别</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>77</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="282.htm" tppabs="http://ms.mayikt.com/detail/282">理解Base与CAP理论、最终一致性概念</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>95</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="281.htm" tppabs="http://ms.mayikt.com/detail/281">谈谈你在项目中那里遇到分布式事务问题？</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>118</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="280.htm" tppabs="http://ms.mayikt.com/detail/280">分布式事务难题产生的背景</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>75</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="279.htm" tppabs="http://ms.mayikt.com/detail/279">Docker相关常用命令</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-10</span> <cite>浏览量</cite>
+							<span>130</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="278.htm" tppabs="http://ms.mayikt.com/detail/278">Elasticsearch为什么查询速度非常快？</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>664</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="277.htm" tppabs="http://ms.mayikt.com/detail/277">SQL语句优化有那些方案？</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>420</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="276.htm" tppabs="http://ms.mayikt.com/detail/276">联合索引为什么需要遵循左前缀原则</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>190</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+					<li><a href="javascript:if(confirm('http://ms.mayikt.com/user/home.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ؾϱǷѨ٦كτݾδ֒սc  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://ms.mayikt.com/user/home.html'" tppabs="http://ms.mayikt.com/user/home.html" class="fly-avatar"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg" alt="管理员">
+					</a>
+						<h2>
+							<a class="layui-badge">面试</a> <a href="275.htm" tppabs="http://ms.mayikt.com/detail/275">为什么 MySQL 索引中使用到 B+ 树</a>
+						</h2>
+
+						<div class="fly-list-info">
+							<a href="#" link> <cite>管理员</cite> <i
+								class="iconfont icon-renzheng" title="认证信息：XXX"></i> <!-- <i class="layui-badge fly-badge-vip">VIP</i> -->
+							</a> <span>2019-03-06</span> <cite>浏览量</cite>
+							<span>207</span>
+						</div>
+
+						<div class="fly-list-badge">
+							<!--<span class="layui-badge layui-bg-red">精帖</span>-->
+						</div></li> 
+
+				</ul>
+				<!--    <div style="text-align: center">
+          <div class="laypage-main">
+            <a href="jieIndex" class="laypage-next">更多求解</a>
+          </div>
+        </div> -->
+
+			</div>
+		</div>
+		<div class="layui-col-md4">
+
+			<div class="fly-panel">
+				<h3 class="fly-panel-title">温馨通道</h3>
+				<ul class="fly-panel-main fly-list-static">
+					<li><a
+						href="javascript:if(confirm('https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd'" tppabs="https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd"
+						target="_blank">一张图看完每特教育培训后薪资涨幅高达1万元</a></li>
+					<li><a href="javascript:if(confirm('https://ke.qq.com/course/273548  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/273548'" tppabs="https://ke.qq.com/course/273548" target="_blank">
+							腾讯课堂入驻最年轻的97后Java架构师,年收入几百万元 </a></li>
+					<li><a
+						href="javascript:if(confirm('http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1'" tppabs="http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1"
+						target="_blank">创办在线教育网站，估值上亿元，拒绝多家风投千万元融资</a></li>
+					<li><a href="javascript:if(confirm('https://ke.qq.com/course/291872  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/291872'" tppabs="https://ke.qq.com/course/291872" target="_blank">
+							每特教育官方SpringCloud微服务视频教程破百万人学习 </a></li>
+					<li><a href="javascript:if(confirm('https://ke.qq.com/course/273548  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/273548'" tppabs="https://ke.qq.com/course/273548" target="_blank">97后互联网架构师腾讯课堂分享Java架构成精之路</a>
+					</li>
+				</ul>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">
+				<h3 class="fly-panel-title">回贴周榜</h3>
+				<dl>
+					<!--<i class="layui-icon fly-loading">&#xe63d;</i>-->
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+					<dd>
+						<a href="#"> <img
+							src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"><cite>管理员</cite><i>100次回答</i>
+						</a>
+					</dd>
+				</dl>
+			</div>
+
+			<dl class="fly-panel fly-list-one">
+				<dt class="fly-panel-title">本周热议</dt>
+				<dd>
+					<a
+						href="javascript:if(confirm('https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd'" tppabs="https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd">一张图看完每特教育培训后薪资涨幅高达1万元</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+				<dd>
+					<a
+						href="javascript:if(confirm('https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc'" tppabs="https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc">腾讯课堂入驻最年轻的97后Java架构师,年收入几百万元</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+				<dd>
+					<a
+						href="javascript:if(confirm('http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1'" tppabs="http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1">创办在线教育网站，估值上亿元，拒绝多家风投千万元融资</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+				<dd>
+					<a href="javascript:if(confirm('http://www.mayikt.com/front/couinfo/91/0  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/front/couinfo/91/0'" tppabs="http://www.mayikt.com/front/couinfo/91/0">每特教育官方SpringCloud微服务视频教程破百万人学习</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+				<dd>
+					<a href="javascript:if(confirm('https://ke.qq.com/course/291872  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/291872'" tppabs="https://ke.qq.com/course/291872">97后互联网架构师腾讯课堂直播互联网架构课程，破千人购买</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+				<dd>
+					<a href="javascript:if(confirm('https://ke.qq.com/course/273548  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/273548'" tppabs="https://ke.qq.com/course/273548">97后互联网架构师腾讯课堂分享Java架构成精之路</a>
+					<span><i class="iconfont icon-pinglun1"></i> 16</span>
+				</dd>
+
+
+				<!-- 无数据时 -->
+				<!--
+        <div class="fly-none">没有相关数据</div>
+        -->
+			</dl>
+
+			<div class="fly-panel">
+				<div class="fly-panel-title">最新活动</div>
+				<div class="fly-panel-main">
+					<a href="javascript:if(confirm('http://www.mayikt.com/user/userVip  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/user/userVip'" tppabs="http://www.mayikt.com/user/userVip" target="_blank"
+						class="fly-zanzhu" time-limit="2017.09.25-2099.01.01"
+						style="background-color: #5FB878;">蚂蚁课堂会员仅需999元</a>
+				</div>
+			</div>
+
+
+			<div class="fly-panel" style="padding: 20px 0; text-align: center;">
+				<img src="gh_221e70ca53fb_258.jpg" tppabs="http://static.itmayiedu.com/gh_221e70ca53fb_258.jpg"
+					style="max-width: 100%;" alt="layui">
+				<p style="position: relative; color: #666;">微信扫码关注 蚂蚁课堂 公众号</p>
+			</div>
+
+			<div class="fly-panel" style="padding: 20px 0; text-align: center;">
+				<img src="1513928038043.jpg" tppabs="http://static.itmayiedu.com/1513928038043.jpg"
+					style="max-width: 100%;" alt="layui">
+				<p style="position: relative; color: #666;">微信扫码关注 蚂蚁课堂 公众号</p>
+			</div>
+
+
+
+
+			<div class="fly-panel fly-link">
+				<h3 class="fly-panel-title">友情链接</h3>
+				<dl class="fly-panel-main">
+					<dd>
+						<a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">蚂蚁课堂</a>
+					<dd>
+					<dd>
+						<a href="javascript:if(confirm('https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9'" tppabs="https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9"
+							target="_blank">腾讯课堂</a>
+					<dd>
+					<dd>
+						<a href="javascript:if(confirm('http://www.meitedu.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.meitedu.com/'" tppabs="http://www.meitedu.com/" target="_blank">每特公司</a>
+					<dd>
+					<dd>
+						<a href="javascript:if(confirm('http://mini.eastday.com/a/170618074857596.html  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://mini.eastday.com/a/170618074857596.html'" tppabs="http://mini.eastday.com/a/170618074857596.html"
+							target="_blank">媒体报道</a>
+					<dd>
+					<dd>
+						<a href="javascript:if(confirm('http://www.itresource.org/plugin.php?id=qgroup:qgroup  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.itresource.org/plugin.php?id=qgroup:qgroup'" tppabs="http://www.itresource.org/plugin.php?id=qgroup:qgroup"
+							class="fly-link">粉丝群</a>
+					<dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="fly-footer">
+  <p><a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">蚂蚁课堂社区</a> 2019 &copy; <a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">每特教育 出品</a></p>
+  <p>
+    <a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">蚂蚁课堂</a>
+    <a href="javascript:if(confirm('https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9'" tppabs="https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9" target="_blank">腾讯课堂</a>
+    <a href="javascript:if(confirm('http://www.itresource.org/plugin.php?id=qgroup:qgroup  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.itresource.org/plugin.php?id=qgroup:qgroup'" tppabs="http://www.itresource.org/plugin.php?id=qgroup:qgroup" target="_blank">粉丝群</a>
+  </p>
+</div>
+
+<script src="layui.js" tppabs="http://ms.mayikt.com/res/layui/layui.js"></script>
+<script>
+	layui.cache.page = '';
+	layui.cache.user = {
+		username : '游客',
+		uid : -1,
+		avatar : '00.jpg'/*tpa=http://ms.mayikt.com/res/images/avatar/00.jpg*/,
+		experience : 83,
+		sex : '男'
+	};
+	layui.config({
+		version : "3.0.0",
+		base : '../res/mods/' //这里实际使用时，建议改成绝对路径
+	}).extend({
+		fly : 'index'
+	}).use('fly');
+</script>
+
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://"
+			: " http://");
+	document
+			.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='"
+					+ cnzz_protocol
+					+ "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

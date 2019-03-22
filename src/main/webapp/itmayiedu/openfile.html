@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蚂蚁宝典网 - 专注于程序员的面试题分享</title>
+    <link rel="stylesheet" href="../js/layui.css">
+    <link rel="stylesheet" href="../js/global.css">
+</head>
+<body>
+
+
+<div class="layui-container">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md8 content detail">
+            <div class="fly-panel detail-box">
+                <div id="sessionwid"></div>
+                <div class="detail-about">
+                    <a class="fly-avatar" href="#"> <img
+                            src="1550629591.jpg.png" tppabs="http://static.itmayiedu.com/1550629591.jpg"
+                            alt="管理员">
+                    </a>
+                    <div class="fly-detail-user">
+                        <a href="#" class="fly-link"> <cite>管理员</cite>
+                            <i class="iconfont icon-renzheng"
+                               title="认证信息：{{ rows.user.approve }}"></i>
+                        </a> <span>2019-02-21</span>
+                    </div>
+                    <div class="detail-hits" id="LAY_jieAdmin" data-id="123">
+                        <span style="padding-right: 10px; color: #FF7200">版权声明：互联网架构面试宝典编写为（每特教育&蚂蚁课堂）官方出品，如需转载该面试宝典内容，请在文章头部声明《转载每特教育&蚂蚁课堂互联网架构面试宝典》，如有抄袭或者侵权会受到法律制裁！</span>
+                    </div>
+                </div>
+
+                <div class="detail-body photos">
+                    <h3>问：</h3><p><div id="sessionwid1"></div><p>
+                    <h3>回答：</h3><p><div id="sessionwid2"></div>
+                </div>
+            </div>
+
+            <div class="fly-panel detail-box" id="flyReply">
+                <div>上一篇：<span><a href="209.htm" tppabs="http://ms.mayikt.com/detail/209" >SpringCloud与Dubbo框架的区别</a></span></div><br />
+
+                <div>下一篇：<span><a href="1-1.htm" tppabs="http://ms.mayikt.com/detail/1" >没有了</a></span></div>
+            </div>
+
+
+            <div class="fly-panel detail-box" id="flyReply">
+                <fieldset class="layui-elem-field layui-field-title"
+                          style="text-align: center;">
+                    <legend>回帖</legend>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="layui-col-md4">
+            <dl class="fly-panel fly-list-one">
+                <dt class="fly-panel-title">本周热议</dt>
+
+                <dd>
+                    <a href="javascript:if(confirm)window.location='https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd'" tppabs="https://mp.weixin.qq.com/s?__biz=MzUzNDQwNTI5OA==&mid=2247483676&idx=1&sn=0ab157709cf2af77ef70271e19524ef6&chksm=fa9408c1cde381d7288816e4a4ed63b17e4159a0dc40afaa41321ca029ac91d4fd77cacd4b63&mpshare=1&scene=23&srcid=1102A1IwsABHl5RtUJmXnsN8#rd">一张图看完每特教育培训后薪资涨幅高达1万元</a>
+                    <span><i class="iconfont 'https://mp.weixin.qq.com/s?__icon-pinglun1"></i> 16</span>
+                </dd>
+                <dd>
+                    <a href="javascript:if(confirm)window.location='https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc'" tppabs="https://baijiahao.baidu.com/s?id=1608288841413969576&wfr=spider&for=pc">腾讯课堂入驻最年轻的97后Java架构师,年收入几百万元</a>
+                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
+                </dd>
+                <dd>
+                    <a href="javascript:if(confirm)window.location='http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1'" tppabs="http://sh.qihoo.com/pc/9c0da1d08e393c6ae?sign=360_e39369d1">创办在线教育网站，估值上亿元，拒绝多家风投千万元融资</a>
+                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
+                </dd>
+                <dd>
+                    <a href="javascript:if(confirm)window.location='http://www.mayikt.com/front/couinfo/91/0'" tppabs="http://www.mayikt.com/front/couinfo/91/0">每特教育官方SpringCloud微服务视频教程破百万人学习</a>
+                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
+                </dd>
+                <dd>
+                    <a href="javascript:if(confirm)window.location='https://ke.qq.com/course/291872'" tppabs="https://ke.qq.com/course/291872">97后互联网架构师腾讯课堂直播互联网架构课程，破千人购买</a>
+                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
+                </dd>
+                <dd>
+                    <a href="javascript:if(confirm)window.location='https://ke.qq.com/course/273548'" tppabs="https://ke.qq.com/course/273548">97后互联网架构师腾讯课堂分享Java架构成精之路</a>
+                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
+                </dd>
+
+                <!-- 无数据时 -->
+                <!--
+        <div class="fly-none">没有相关数据</div>
+        -->
+            </dl>
+
+            <div class="fly-panel">
+                <div class="fly-panel-title">蚂蚁课堂会员仅需999</div>
+                <div class="fly-panel-main">
+                    <a href="javascript:if(confirm('http://www.mayikt.com/user/userVip  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/user/userVip'" tppabs="http://www.mayikt.com/user/userVip" target="_blank"
+                       class="fly-zanzhu" time-limit="2017.09.25-2099.01.01"
+                       style="background-color: #5FB878;">蚂蚁课堂会员仅需999</a>
+                </div>
+            </div>
+
+            <div class="fly-panel" style="padding: 20px 0; text-align: center;">
+                <img src="gh_221e70ca53fb_258.jpg" tppabs="http://static.itmayiedu.com/gh_221e70ca53fb_258.jpg" style="max-width: 100%;"
+                     alt="layui">
+                <p style="position: relative; color: #666;">微信扫码关注 蚂蚁课堂 公众号</p>
+            </div>
+
+            <div class="fly-panel" style="padding: 20px 0; text-align: center;">
+                <img src="1513928038043.jpg" tppabs="http://static.itmayiedu.com/1513928038043.jpg" style="max-width: 100%;"
+                     alt="layui">
+                <p style="position: relative; color: #666;">微信扫码关注 蚂蚁课堂 公众号</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="fly-footer">
+    <p><a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">蚂蚁课堂社区</a> 2019 &copy; <a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">每特教育 出品</a></p>
+    <p>
+        <a href="javascript:if(confirm('http://www.mayikt.com/  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.mayikt.com/'" tppabs="http://www.mayikt.com/" target="_blank">蚂蚁课堂</a>
+        <a href="javascript:if(confirm('https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9'" tppabs="https://ke.qq.com/course/list/%E6%AF%8F%E7%89%B9" target="_blank">腾讯课堂</a>
+        <a href="javascript:if(confirm('http://www.itresource.org/plugin.php?id=qgroup:qgroup  \n\nكτݾϞרԃ Teleport Ultra Ђ՘, ӲΪ ̼ˇһٶԲܲ·޶΢ҿѻʨ׃Ϊ̼քǴʼַ֘քַ֘c  \n\nţЫ՚ؾϱǷʏղߪ̼?'))window.location='http://www.itresource.org/plugin.php?id=qgroup:qgroup'" tppabs="http://www.itresource.org/plugin.php?id=qgroup:qgroup" target="_blank">粉丝群</a>
+    </p>
+</div>
+<script src="layui.js" tppabs="http://ms.mayikt.com/res/layui/layui.js"></script>
+<script src="../js/jquery-1.8.0.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:"../addSessionOpenfile2",
+            success:function (data) {
+                var str = "<h1>"+data.name+"</h1>";
+                var str1 = "<h3>"+data.name+"</h3>";
+                var str2 = "<h3>"+data.contont+"</h3>";
+                $("#sessionwid").html(str);
+                $("#sessionwid1").html(str1);
+                $("#sessionwid2").html(str2);
+            }
+        })
+        $.ajax({
+            url:"../addSessionOpenfile3",
+            success:function (data) {
+                var str2 = "<h3>"+data.contont+"</h3>";
+                $("#sessionwid2").html(str2);
+            }
+        })
+    })
+</script>
+<script>
+    layui.cache.page = 'jie';
+    layui.cache.user = {
+        username : '游客',
+        uid : -1,
+        avatar : '00.jpg'/*tpa=http://ms.mayikt.com/res/images/avatar/00.jpg*/,
+        experience : 83,
+        sex : '男'
+    };
+    layui.config({
+        version : "3.0.0",
+        base : '../../res/mods/'
+    }).extend({
+        fly : 'index'
+    }).use([ 'fly', 'face' ], function() {
+        var $ = layui.$, fly = layui.fly;
+        //如果你是采用模版自带的编辑器，你需要开启以下语句来解析。
+        /*
+        $('.detail-body').each(function(){
+          var othis = $(this), html = othis.html();
+          othis.html(fly.content(html));
+        });
+         */
+    });
+</script>
+
+</body>
+</html>

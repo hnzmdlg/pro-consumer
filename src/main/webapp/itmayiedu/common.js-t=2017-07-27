@@ -546,6 +546,8 @@ function dialogLogin(type) {
 	var autoThirty = $("#autoThirty").prop("checked")
 	var loginRest = $("#loginResultUrl").val();
 
+    //alert("userName"+userName+"==="+"pwd"+pwd+"==="+"autoThirty"+autoThirty+"==="+"loginRest"+loginRest);
+
 	$("#u-email").next().html('');
 	$("#u-password").next().html('');
 	$(".e-l-jy").html('');
@@ -564,29 +566,24 @@ function dialogLogin(type) {
 		return false;
 	}
 	$.ajax({
-		url : baselocation + '/uc/login',
+
+		url : '../tologin',
 		type : 'post',
-		dataType : 'json',
 		data : {
-			"account" : userName,
-			"password" : pwd,
+			"name" : userName,
+			"pwd" : pwd,
 			"ipForget" : autoThirty,
 			"type" : type
 		},
-		success : function(result) {
-			if (result.success == false) {
-				$(".e-l-jy").html(
-						'<font class="fsize12 c-orange">' + result.message
-								+ '</font>');
-			} else {
-				if (type == 1) {
-					window.location.href = "/uc/index";
-				} else if (type == 2 && loginRest != '') {
-					window.location.href = loginRest;
-				} else {
-					window.location.reload();
-				}
-			}
+		success : function(data) {
+		    //alert(data)
+			if(data=="登录成功"){
+                alert("提示",data,"info")
+                window.location.reload();
+            }else{
+                alert("提示",data,"error")
+            }
+
 		},
 		error : function(error) {
 			alert("系统繁忙，请稍后再操作！");

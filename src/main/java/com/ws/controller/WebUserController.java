@@ -2,6 +2,7 @@ package com.ws.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.ws.bean.Meal;
 import com.ws.bean.WebUser;
 import com.ws.service.WebUserService;
 import com.ws.utils.CommonCanstant;
@@ -13,9 +14,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 @Controller
 public class WebUserController {
@@ -23,7 +26,21 @@ public class WebUserController {
     @Autowired
     private WebUserService webUserService;
 
-
+    //登录
+    @RequestMapping("tologin")
+    @ResponseBody
+    public String tologin(WebUser webUser, HttpSession session){
+        WebUser user2 = webUserService.queryUserByLogin(webUser.getName());
+        System.out.println(user2.toString());
+        if(user2==null){
+            return "用户名错误";
+        }
+        if(!webUser.getPwd().equals(user2.getPwd())){
+            return "密码错误";
+        }
+        session.setAttribute("user", user2);
+        return "登录成功";
+    }
 
     //查询用户表
     @RequestMapping("queryWebUser")
@@ -122,5 +139,12 @@ public class WebUserController {
         }
         return "验证码发送成功";
     }
+//查询套餐
 
+    @RequestMapping("querymeal")
+    @ResponseBody
+    public List<Meal> querymeal(Integer id) {
+        return webUserService.querymeal(id);
+
+    }
 }

@@ -23,17 +23,7 @@
 
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-            src="http://static.itmayiedu.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript"
-            src="http://static.itmayiedu.com/jquery.qrcode.min.js"></script>
-    <script type="text/javascript" src="/static/js/common/webutils.js"></script>
-    <script type="text/javascript"
-            src="http://static.itmayiedu.com/headerH5SearchCommon.min.js"></script>
-    <script type="text/javascript"
-            src="http://static.itmayiedu.com/header.js"></script>
-    <script type="text/javascript"
-            src="http://static.itmayiedu.com/common.min.js"></script>
+
 
 	<link rel="shortcut icon" href="http://www.itmayiedu.com/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css"
@@ -73,11 +63,22 @@
 
 	</script>
 
+	<script type="text/javascript">
+        $(document).ready(function() {
+            var i = setInterval(function() {
+                if ($(".in-wrap").next().is(":hidden")) {
+                    clearTimeout(i);
+                    $(".in-wrap").next().show();
+                    //如果元素为隐藏,则将它显现
+                } else {
+                    $(".in-wrap").next().html('');
+                    $(".in-wrap").next().hide(); //如果元素为显现,则将其隐藏
+                }
 
+            }, 1);
 
-
-
-
+        });
+	</script>
 
 </head>
 <body class="W-body">
@@ -179,7 +180,9 @@
 				<aside class="h-r-search">
 					<form action="http://www.itmayiedu.com/front/showcoulist" method="post">
 						<label class="h-r-s-box"><input type="text"
-														placeholder="输入你想学的课程" name="queryCourse.kname"
+
+														placeholder="输入你想学的课程" name="queryCourse.courseName"
+
 														value="">
 							<button type="submit" class="s-btn">
 								<em class="icon18">&nbsp;</em>
@@ -401,28 +404,28 @@
 
 
 		<!-- /index slide -->
-	<div id="aCoursesList">
-		<div class="of bg-fff">
-			<section class="container">
-				<header class="comm-title">
+		<div id="aCoursesList">
+			<div class="of bg-fff">
+				<section class="container">
+					<header class="comm-title">
 			<span class="fr mt15 mr10 hyh"><a href="javascript:void(0)"
-			 title="换一换" class="c-master" onclick="huanYiHuan()">换一换</a></span>
-					<h2 class="fl tac tit-header">
-						<span class="c-333">为你推荐</span>
-					</h2>
-				</header>
-				<article class="comm-course-list">
-					<ul class="of  " id="weinituijian0">
+											  title="换一换" class="c-master" onclick="huanYiHuan()">换一换</a></span>
+						<h2 class="fl tac tit-header">
+							<span class="c-333">为你推荐</span>
+						</h2>
+					</header>
+					<article class="comm-course-list">
+						<ul class="of  " id="weinituijian0">
 
-					</ul>
-					<div class="clear"></div>
-				</article>
-			</section>
-		</div>
-		<!-- /为你推荐 结束 -->
+						</ul>
+						<div class="clear"></div>
+					</article>
+				</section>
+			</div>
+			<!-- /为你推荐 结束 -->
 
-		<!-- 精品录播 开始 -->
-<script>
+			<!-- 精品录播 开始 -->
+			<script>
 	$(function(){
 		$.ajax({
 			url:"/kechenglist",
@@ -767,39 +770,9 @@
 		</div>-->
 
 		<!--&lt;!&ndash; /网校课程 开始 &ndash;&gt;
-		<div>
-			<section class="container">
-				<header class="comm-title">
-					<h2 class="tac">
-						<span class="c-333">实战课程</span>
-					</h2>
-				</header>
-				<div>
-					<section class="c-tab-title">
-						<a href="javascript:void(0)" title="精品课程"
-						   onclick="bna('FOLLOW',this)">精品课程</a> <a
-							href="javascript:void(0)" class="current boutiqueCourse"
-							title="最新课程" onclick="bna('NEW',this)">最新课程</a> <a
-							href="javascript:void(0)" title="全部课程" onclick="bna('ALL',this)">全部课程</a>
-					</section>
-				</div>
-				<div>
-					<article class="comm-course-list">
-						<ul class="of" id="bna">
-						</ul>
-						<div class="clear"></div>
-					</article>
-					<section class="tac pt20">
-						<a href="showcoulist.htm"  title="全部课程"
-						   class="comm-btn c-btn-2">全部课程</a>
-					</section>
-				</div>
-			</section>
-		</div>
 
-	</div>-->
 
-	<!-- /网校名师 开始 -->
+/网校名师 开始 -->
 
 	<!-- /网校名师 结束 -->
 	<!-- 资讯列表 -->
@@ -1361,7 +1334,11 @@ white-space: nowrap;
 </div>
 
 <!-- <script type="text/javascript"
-			src="http://www.itmayiedu.com/static/inxweb/js/adaptive.js"></script> -->
+=======
+	</div>-->
+<script type="text/javascript"
+
+			src="http://www.itmayiedu.com/static/inxweb/js/adaptive.js"></script>
 	<script type="text/javascript"
 			src="swiper-2.1.0.js" ></script>
 	<script type="text/javascript"
@@ -1401,204 +1378,166 @@ white-space: nowrap;
 
 <!--End对联广告-->
 
-
-<div class="mo-footer">
 	<!-- 公共底引入 -->
-	<style type="text/css">
-		.bdsharebuttonbox .bds_tsina {
-			background-image: url("/static/inxweb/img/share-sina.png");
-			background-position: 0;
-		}
-
-		.bdsharebuttonbox .bds_weixin {
-			background-image: url("/static/inxweb/img/share-weixin.png");
-			background-position: 0;
-		}
-
-		.bdsharebuttonbox .bds_qzone {
-			background-image: url("/static/inxweb/img/share-qzone.png");
-			background-position: 0;
-		}
-	</style>
-	<script type="text/javascript"
-			src="http://static.itmayiedu.com/footer.min.js"></script>
-
-
-
-
-
-
-
-	<link rel="stylesheet" type="text/css" href="http://static.itmayiedu.com/base.min.css">
-	<script type="text/javascript" src="http://static.itmayiedu.com/test.js"></script>
-
-
-	<footer id="footer" style="background-color: #f1f0f0;">
+	<link href="qq.css"  rel="stylesheet">
+	<footer id="footer">
 		<section class="container">
+			<div class="">
+				<h4 class="hLh30">
+					<span class="fsize18 f-fM c-999">友情链接</span>
+				</h4>
+				<ul class="of flink-list">
+					<li><a   title="每特学院"
+							 target="_blank">每特学院</a>
+					</li>
+					<li><a   title="IT资源网"
+							 target="_blank">IT资源网</a>
+					</li>
+					<li><a   title="每特公司"
+					>每特公司</a>
+					</li>
+					<li><a   title="媒体报道"
+							 target="_blank">媒体报道</a>
+					</li>
+					<li><a   title="粉丝群"
+							 target="_blank">粉丝群</a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
 			<div class="b-foot">
-				<section class="fl col-80">
+				<section class="fl col-7">
 					<section class="mr20">
-						<div class="find-box">
-							<h4 class="hLh30 txtOf">
-								<span class="fsize18 f-fM c-fff" style="color:#6c6c6c">友情链接</span></h4>
-							<ul class="flink-list clearfix">
-
-
-								<li><a href="http://www.itresource.org" title="Java视频教程" target="_blank">Java视频教程</a></li>
-
-
-
-								<li><a href="https://ms.meitedu.com" title="Java面试宝典" target="_blank">Java面试宝典</a></li>
-
-
-
-								<li><a href="http://www.meitedu.com/" title="每特公司" target="_blank">每特公司</a></li>
-
-
-
-								<li><a href="http://mini.eastday.com/a/170618074857596.html" title="媒体报道" target="_blank">媒体报道</a></li>
-
-
-
-								<li><a href="http://www.itresource.org/plugin.php?id=qgroup:qgroup" title="粉丝群" target="_blank">粉丝群</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							</ul>
-							<div class="clear"></div>
-						</div>
-						<section class="b-f-link mt20">
-							<a href="https://jq.qq.com/?_wv=1027&k=5bwGmi2" title="帮助中心" target="_blank">帮助中心</a>|
-							<a href="https://jq.qq.com/?_wv=1027&k=5bwGmi2" title="联系我们" target="_blank">联系我们</a>|
-							<a href="https://meitedu.ke.qq.com/?tuin=388db9e0#tab=3&category=-1" title="关于我们" target="_blank">关于我们</a>|
-							<a href="//www.mayikt.com/sitemap.xml" title="网站地图" target="_blank">网站地图</a>|
-							<span>客服小薇QQ：483966038</span>
-							<span>Email：644064779@qq.com</span>
-							<span class="ml30">
-							<tt class="c-666 f-fM vam">官方粉丝群：</tt><tt class="c-666 f-fM vam mr20">193086273</tt></span>
+						<section class="b-f-link">
+							<a href="117.html"  title="关于我们"
+							>关于我们</a>|
+							<span>服务热线：400-006-5079</span> <span>Email：644064779@qq.com Java技术交流群:116295598</span>
 						</section>
 						<section class="b-f-link mt10">
-							<span>Copyright ©2016-2019 上海每特教育科技有限公司 版本所有</span>
-							<span class="c-666">Powered by<a title="上海每特教育科技有限公司" target="_blank" href="#" class="c-666">蚂蚁课堂</a></span>
-							<!-- 统计代码 -->
+							<span>©2016-2018    上海每特教育科技有限公司版本所有</span>
 						</section>
 					</section>
 				</section>
-				<aside class="fl col-20 tar ewm-box">
-				<span class="disIb tac">
-					<img src="http://static.itmayiedu.com/1513928038043.jpg" alt="" class="dis" width="140" height="140">
-					<p class="hLh30 fsize14 c-999 f-fM mt10 tac">关注微信公众号</p>
-				</span>
+				<aside class="fl col-3 tac mt15">
+					<section class="gf-tx">
+						<span><img src="wx-icon.png"  alt=""></span>
+						<div class="gf-tx-ewm">
+							<img src="1513928038043.jpg"  alt="">
+						</div>
+					</section>
+					<section class="gf-tx">
+						<span><img src="wb-icon.png"  alt=""></span>
+						<div class="gf-tx-ewm">
+							<img src="1441801298938.png"  alt="">
+						</div>
+					</section>
 				</aside>
 				<div class="clear"></div>
-
 			</div>
 		</section>
 	</footer>
+	<!-- 代码部分 begin -->
+	 <div class="r-fixed-wrap">
+    <ul class="r-fixed-ul">
+    <li id="goTopBtn" class="undis"><a href="javascript: void(0)"
+    title="返回顶部" class="bg-orange"> <em class="r-f-icon-3">&nbsp;</em><span>返回顶部</span>
+    </a></li>
 
+    </ul>
+    </div>
+	<section  style="color: #666; position: absolute; left: 50%; bottom: 20px; z-index: 7; margin-left: -80px;">
+		<span>Powered by</span>
+		<a style="margin-left: 2px; color: #666;" title="IT蚂蚁课堂">蚂蚁课堂</a>
 
-	<!-- <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?b43c1c82b09cda6b125e6981fbde442c";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script> -->
+		<script>(function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/3b2adbb4.js", "daovoice")</script>
+		<script>
+            function IsPC() {
+                var userAgentInfo = navigator.userAgent;
+                var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"
+                ];
+                var flag = true;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                return flag;
+            }
 
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?eaa952b8610db6f155ab0febd442e89a";
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
+            var myerror = '';
+            (function () {
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'push.js'/*tpa=https://zz.bdstatic.com/linksubmit/push.js*/;
+                } else {
+                    bp.src = 'push-1.js'/*tpa=http://push.zhanzhang.baidu.com/push.js*/;
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
 
+            $(function () {
 
+                $('#close_im').bind('click', function () {
+                    $('#main-im').css("height", "0");
+                    $('#im_main').hide();
+                    $('#open_im').show();
+                });
+                $('#open_im').bind('click', function (e) {
+                    $('#main-im').css("height", "272");
+                    $('#im_main').show();
+                    $(this).hide();
+                });
+                $('.go-top').bind('click', function () {
+                    $(window).scrollTop(0);
+                });
+                $(".weixing-container").bind('mouseenter', function () {
+                    $('.weixing-show').show();
+                })
+                $(".weixing-container").bind('mouseleave', function () {
+                    $('.weixing-show').hide();
+                });
 
+                // if (!IsPC()) {
+               //     $("#main-im").hide();
+                // }
+            });
 
-	<!-- end -->
+            daovoice('init', {
+                app_id: "3b2adbb4"
+            });
+            daovoice('update');
+		</script>
+	</section>
+	<!-- 公共底引入 -->
+</div>
+<script>
+    $(function() {// 初始化内容
 
+    });
 
-	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN">
+    function ad() {
 
-	<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>js+cookie实现页脚固定广告条代码</title>
+	    alert(11)
 
+    }
 
-
-	</head>
-
-	<body>
-
-
-
-
-
-	</body>
-	</html>
-
-
-	<!-- 底部结束 -->
-	<div class="r-fixed-wrap">
-		<div class="pr r-fix-box">
-			<ul class="r-fixed-ul">
-				<li id="goTopBtn" class="undis"><a href="javascript: void(0)"
-												   title="返回顶部" class="bg-orange"> <em class="r-f-icon-3">&nbsp;</em><span>返回顶部</span>
-				</a></li>
-				<!-- <li class="foot-zixun" id="shopCart">
-            <a href="javascript:shopCartHtml()" title="查看详情" class="bg-orange pr" id="v-nav-first">
-                <em class="r-f-icon-4">&nbsp;</em><span>查看详情</span>
-                <tt class="shop-car-num" id="shopCartNum">0</tt>
-            </a>
-        </li>
-        <li class="foot-zixun">
-            <a href="" target="_blank" title="在线咨询" class="bg-orange">
-                <em class="r-f-icon-1">&nbsp;</em><span>在线咨询</span>
-            </a>
-        </li>
-        <li class="foot-zixun">
-            <a href="JavaScript:void(0)" title="扫描关注" class="bg-orange">
-                <em class="r-f-icon-2">&nbsp;</em><span>扫描关注</span>
-                <div class="smgz-pic">
-                    <img src="/static/images/userInfo/1481617339900.jpg" width="150" height="150" class="dis">
-                    <p class=" fsize14 f-fM c-666 tac">扫一扫，关注我们</p>
-                </div>
-            </a>
-        </li> -->
-			</ul>
-			<div class="shopcar-box fr" id="shopcarthtml"></div>
-		</div>
-	</div>
-
-
-
-
-
-
+</script>
+<!-- 统计代码 -->
 
 </body>
 </html>
