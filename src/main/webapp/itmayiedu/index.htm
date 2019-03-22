@@ -348,20 +348,20 @@
 						var data = xmlHttp.responseText;
 						var htmlRecommend = '';
 						for (var i = 0; i < JSON.parse(data).queryCourseDetailPagelist.length; i++) {
-							var courseId = JSON.parse(data).queryCourseDetailPagelist[i].courseId;
+							var courseId = JSON.parse(data).queryCourseDetailPagelist[i].id;
 
 							var kname = JSON.parse(data).queryCourseDetailPagelist[i].kname;
 							var kurl = JSON.parse(data).queryCourseDetailPagelist[i].kurl;
 							var courseType = JSON.parse(data).queryCourseDetailPagelist[i].type;
 							var pageViewcount = JSON.parse(data).queryCourseDetailPagelist[i].pageViewcount;
 							htmlRecommend = htmlRecommend
-									+ '<li> <div class="cc-l-wrap"><section class="course-img"> <a href="/front/couinfo/'+courseId+'/0"> <img xsrc="'+logo+'" src="'+logo+'" class="img-responsive" alt="'+kname+'"> </a>';
+									+ '<li> <div class="cc-l-wrap"><section class="course-img"> <a href="htmity'+id+'/0"> <img xsrc="'+logo+'" src="'+logo+'" class="img-responsive" alt="'+kname+'"> </a>';
 							htmlRecommend = htmlRecommend
-									+ '<div class="cc-mask"> <a href="/front/couinfo/'+courseId+'/0" title="" class="comm-btn c-btn-1">开始学习</a> </div> ';
+									+ '<div class="cc-mask"> <a href="/front/couinfo/'+id+'/0" title="" class="comm-btn c-btn-1">开始学习</a> </div> ';
 							htmlRecommend = htmlRecommend
 									+ '</section><div class="coure-bg-g"><h3 class="hLh30 txtOf">';
 							htmlRecommend = htmlRecommend
-									+ '<a href="/front/couinfo/'+courseId+'/0" title="'+kname+'" id="course-title fsize16 c-333" class="course-title fsize16 c-333">'
+									+ '<a href="/front/couinfo/'+id+'/0" title="'+kname+'" id="course-title fsize16 c-333" class="course-title fsize16 c-333">'
 									+ kname + '</a>';
 							htmlRecommend = htmlRecommend
 									+ '</h3><section class="mt10 hLh20 of"><span class="fr"><tt class="c-master fsize14 f-fM">';
@@ -394,7 +394,7 @@
 				};
 
 				xmlHttp.open("post", "getAjaxHuanYiHuan", true);
-				xmlHttp.send();
+				xmlHttp.send();3
 
 			}
 		</script>
@@ -406,7 +406,7 @@
 			<section class="container">
 				<header class="comm-title">
 			<span class="fr mt15 mr10 hyh"><a href="javascript:void(0)"
-											  title="换一换" class="c-master" onclick="huanYiHuan()">换一换</a></span>
+			 title="换一换" class="c-master" onclick="huanYiHuan()">换一换</a></span>
 					<h2 class="fl tac tit-header">
 						<span class="c-333">为你推荐</span>
 					</h2>
@@ -431,9 +431,9 @@
 					$("#weinituijian0").append("<li>\n" +
 							"\t\t\t\t\t\t<div class=\"cc-l-wrap\">\n" +
 							"\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
-							"\t\t\t\t\t\t\t\t<section class=\"course-img\">\n" +
+							"\t\t\t\t\t\t\t\t<section class="+data[i].kurl+">\n" +
 							"\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/87/0\" target=\"_blank\"> <img\n" +
-							"\t\t\t\t\t\t\t\t\t\txsrc=\"http://static.itmayiedu.com/00000000001.jpg\"\n" +
+							"\t\t\t\t\t\t\t\t\t\txsrc="+data[i].kurl+"\n" +
 							"\t\t\t\t\t\t\t\t\t\tsrc=\"http://static.itmayiedu.com/00000000001.jpg\"\n" +
 							"\t\t\t\t\t\t\t\t\t\tclass=\"img-responsive\" alt=\"\">\n" +
 							"\t\t\t\t\t\t\t\t\t</a>\n" +
@@ -448,7 +448,7 @@
 							"\t\t\t\t\t\t\t\t<h3 class=\"hLh30 txtOf\">\n" +
 							"\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/87/0\"\n" +
 							"\t\t\t\t\t\t\t\t\t\ttitle=\"2019版SpringBoot\"\n" +
-							"\t\t\t\t\t\t\t\t\t\tclass="+data[i].kname+">"+data[i].kname+"</a>\n" +
+							"\t\t\t\t\t\t\t\t\t\tclass="+data[i].mlname+">"+data[i].mlname+"</a>\n" +
 							"\t\t\t\t\t\t\t\t</h3>\n" +
 							"\t\t\t\t\t\t\t\t<section class=\"mt10 hLh20 of\">\n" +
 							"\t\t\t\t\t\t\t\t\t<span class=\"fr\"> <tt class=\"c-master fsize14 f-fM\">\n" +
@@ -512,8 +512,8 @@
 												"\t\t\t\t\t\t\t\t<div class=\"coure-bg-g\">\n" +
 												"\t\t\t\t\t\t\t\t\t<h3 class=\"hLh30 txtOf\">\n" +
 												"\t\t\t\t\t\t\t\t\t\t<a href=\"/front/couinfo/191/0\"\n" +
-												"\t\t\t\t\t\t\t\t\t\t\ttitle="+data[i].kname+"\n" +
-												"\t\t\t\t\t\t\t\t\t\t\tclass=\"course-title fsize16 c-333\">"+data[i].kname+"</a>\n" +
+												"\t\t\t\t\t\t\t\t\t\t\ttitle="+data[i].mlname+"\n" +
+												"\t\t\t\t\t\t\t\t\t\t\tclass=\"course-title fsize16 c-333\">"+data[i].mlname+"</a>\n" +
 												"\t\t\t\t\t\t\t\t\t</h3>\n" +
 												"\t\t\t\t\t\t\t\t\t<section class=\"mt10 hLh20 of\">\n" +
 												"\t\t\t\t\t\t\t\t\t\t<span class=\"fr\"> <tt class=\"c-master fsize14 f-fM\">\n" +
@@ -1113,7 +1113,10 @@ white-space: nowrap;
 								cont += "<tr>";
 
 								cont += "<td>" + data[i].id + "</td>";
-								cont += "<td>" + data[i].name + "</td>";
+								cont +=" <td>"+"<a href=' "+ data[i].url+"'>" + data[i].name + " </a></td>";
+
+								/*cont +=" <td>"+"<a href='javascript:seektype("+ data[i].url+")' onclick='link()'>" + data[i].name + " </a></td>";*/
+								/*"<td>"+"<a href='"+data[i].title+"'>"+tt+"</a></td>"*/
 								"</tr>";
 							}
 							$("#seekid").html(cont);
@@ -1122,7 +1125,16 @@ white-space: nowrap;
 					})
 					})
 
-
+				/*function link(url) {
+					//你的功能
+					alert(url);
+					//跳转
+					location.href = url;
+				}
+			function seektype(url){
+					alert(url)
+					location.href=url;
+			}*/
 
 
 

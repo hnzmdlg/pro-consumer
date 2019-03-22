@@ -8,6 +8,33 @@ public class Catalog implements Serializable {
     private Integer id;
     private String mlname;
     private Integer kid;
+    private Integer type;
+    private Integer lls;
+    private  String oktime;
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Integer getLls() {
+        return lls;
+    }
+
+    public void setLls(Integer lls) {
+        this.lls = lls;
+    }
+
+    public String getOktime() {
+        return oktime;
+    }
+
+    public void setOktime(String oktime) {
+        this.oktime = oktime;
+    }
 
     public Integer getId() {
         return id;
